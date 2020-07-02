@@ -1,0 +1,341 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cap02-ejercicio-1.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+    <script src="cap02-ejercicio-1.js"></script>
+    <title>Algunas etiquetas muy usadas</title>
+</head>
+<body>
+    <h1 class="principal-title">Listas y etiquetas de imagen, audio y video</h1>
+    <div class="image-hero">
+        <img class="imagen-hero" src="html.png">
+    </div>
+    <h2 class="section-title-2">Listas &ltol&gt &ltul&gt &ltdd&gt</h2>
+    <p>Hay fundamentalmente tres tipos de listas</p>
+    <h3 class=section-title-3 id="ol">Listas numeradas &ltol&gt</h3>
+    <p> se usan con la etiqueta &ltol&gt&ltol/&gt, sirven para presentar una serie de elementos numerados y en orden, veamos un ejemplo</p>
+    <article>
+    <pre>
+            &ltp&gtLas principales ciudades de latinoamerica son:&lt/p&gt
+            &ltol&gt
+                &ltli&gt
+                    &gtp&gtBuenos Aires&lt/p&gt 
+                &lt/li&gt
+                 &ltli&gt
+                    &ltp>Lima&lt/p&gt
+                &lt/li&gt
+                &ltli&gt
+                    &ltp&gtBogotá&lt/p&gt
+                &lt/li&gt
+                &ltli&gt
+                    &ltp&gtSao Paulo&lt/p&gt
+                &lt/li&gt
+                &ltli&gt
+                    &ltp&gtQuito&lt/p&gt
+                &lt/li&gt
+            &lt/ol&gt          
+    </pre>    
+    <p>Las principales ciudades de latinoamerica son:</p>
+    <ol>
+        <li>
+            <p>Buenos Aires</p>
+        </li>
+        <li>
+            <p>Lima</p>
+        </li>
+        <li>
+            <p>Bogotá</p>
+        </li>
+        <li>
+            <p>Sao Paulo</p>
+        </li>
+        <li>
+            <p>Quito</p>
+        </li>
+    </ol>      
+    </article>
+    <h3 class=section-title-3  id="ul">Listas no numeradas &ltul&gt</h3>
+    <p>Las listas no numeradas se usan con la etiqueta &ltul&gt&ltul/&gt, presentan elementos no numerados pero con cierta identación, veamos el mismo ejemplo que el anterior, pero esta ves con la lista no numerada</p>
+    <article>
+    <pre>
+        &ltul&gt
+            &ltli&gt
+                &ltp&gtBuenos Aires&lt/p&gt
+            &lt/l&gt
+            &ltli&gt
+                &ltp&gtLima&lt/p&gt
+            &lt/li&gt
+            &ltli&gt
+                &ltp&gtBogotá&lt/p&gt
+            &lt/li&gt
+            &ltli&gt
+                &ltp&gtSao Paulo&lt/p&gt
+            &lt/li&gt
+            &ltli&gt
+                &ltp&gtQuito&lt/p&gt
+            &lt/li&gt
+        </ul>      
+    </pre>
+    <ul>
+        <li>
+            <p>Buenos Aires</p>
+        </li>
+        <li>
+            <p>Lima</p>
+        </li>
+        <li>
+            <p>Bogotá</p>
+        </li>
+        <li>
+            <p>Sao Paulo</p>
+        </li>
+        <li>
+            <p>Quito</p>
+        </li>
+    </ul>      
+    </article>
+    <h3 class=section-title-3  id="dd-dt">Listas de terminos y definiciones &ltdd&gt &ltdt&gt</h3>
+    <p>Las listas de terminos y definiciones sirven para mencionar conceptos y su explicación. Donde la etiqueta &ltdt&gt se refiere a los terminos, y la etiqueta &ltdd&gt a las definiciones de esos terminos</p>
+    <article>
+       <pre>
+            &ltp&gtLas partes de un documento web son:&lt/p&gt
+            &ltdd&gtLa cabercera&lt/dd&gt
+            &ltdt&gtIncluye los link de javascript, css, los metadatos y el título&lt/dt&gt
+            &ltdd&gtEl cuerpo&lt/dd&gt 
+            &ltdt&gtEs la parte del documento en la que se presenta el contenido de una página web&lt/dt&gt
+       </pre> 
+       <p>Las partes de un documento web son:</p> 
+       <dd>La cabercera</dd>
+       <dt>Incluye los link de javascript, css, los metadatos y el título</dt>
+       <dd>El cuerpo</dd> 
+       <dt>Es la parte del documento en la que se presenta el contenido de una página web</dt>
+    </article>
+    <h2 class="section-title-2" id="img">Imagenes &ltimg&gt</h2>
+    <p>HTML permite incorporar archivos de imagen con la etiqueta &ltimg&gt, las imagenes son fundamentalmente <strong>mapas de bits</strong> que contienen <em>pixeles</em>, las cuales son unidades de color
+    hay varios formatos de imagenes, los formatos de imagen que mas se usan en el desarrollo web son:
+    </p>
+    <ul>
+        <li>
+            <p><strong>.jpg: </strong>Es un formato de imagen que no soporta compresiones, se usa para imagenes con muchos colores como fotos</p>
+        </li>
+        <li>
+            <p><strong>.png: </strong>Es un formato de imagen que permite transparencias, cuando se comprime no tiene tanto grado de compresiones</p>
+        </li>
+        <li>
+            <p><strong>.gif: </strong>Es un formato de animación que tiene una gama de 256 colores</p>
+        </li>
+    </ul>
+    <p>Hay algunos desarrolladores web que realizan cursos de edición de imagen, tales como photoshop, y aplicaciones y programas gratis como GIMP. Para adjuntar ina imagen se usa la etiqueta &ltimg&gt</p>
+    <p>Si se usa la siguiente etiqueta</p>
+    <pre>
+        &ltimg src="html.png"&gt    
+    </pre>
+    <p>debería aparecer la siguiente imagen</p>
+    <img src="html.png">
+    <h2 class="section-title-2" id="a">Enlaces &lta&gt</h2>
+    <p>Html es un lenguaje que funciona a partir de <strong>nodos de información</strong> que son medios por los cuales el usuario puede navegar a voluntad, los enlaces permiten navegar, entre enlaces de la
+    misma página, o a enlaces de otras páginas. Para añadir un enlace usamos la etiqueta <strong>&lta&gt&lt/a&gt</strong>. Los tres posbibles enlaces que se pueden realizar en html son:
+    </p>
+    <ul>
+        <li>
+            <p><strong>De dirección absoluta: </strong> cuando el enlace remite a una página web. Por ejemlplo "https://www.google.com"</p>
+        </li>
+        <li>
+            <p><strong>De dirección relativa: </strong> cuando el enlace remite a un archivo localizado en el servidor. Por ejemplo "archivo/fot.png"</p>
+        </li>
+        <li>
+            <p><strong>De correo electronico: </strong> cuando el enlace remite a un correo electronico. Por ejemplo "jfrancoh@ucentral.edu.co"</p>
+        </li>
+    </ul>
+    <p>En los enlaces de dirección, las etiquetas generaban un hipervínculo a un enlace externo de la página web, pero también es posible generar enlaces adentro de la misma página, o el<strong>fragmento</strong> de la 
+    página web, esto es posible realizarlo de dos maneras. Utilizando el atributo name="" o el atributo id=""</p>
+    <section>
+    <p>en el siguiente ejemplo, la etiqueta llamada <code>&lta href="ejemplo"&gt/&gt</code></p>
+        <a href="ejemplo">ejemplo</a>
+    </section>    
+    <h2 class="section-title-2" id="audio">Archivos multimedia de &ltaudio&gt y &ltvideo&gt</h2>
+    <p>HTML tiene etiquetas para traer archivos de audio y video</p>
+    <p>Las innovaciones en html5 permiten cargar archivos de audio y video sin tener que usar <em>plugins</em>, y gracias a conocimientos elementales en javascript, los desarrolladores pueden hacer muchas aplicaciones
+    para esta etiqueta existe una etiqueta complementaria <strong>&ltsource&gt</strong>. La etiqueta <a id="source">source</a> da soporte a las etiquetas de audio y video para adaptar diferentes formatos. Ya que los navegador manejan diferentes<br>
+    licencias de uso de archivos de metadatos de audio y video. Sin embargo, los formatos de mas licencias son mp3, mp4, wav, y h.264. La forma de usar la etiqueta source 
+    </p>
+    <pre>
+        &ltaudio controls&gt  
+            &ltsource src="horse.ogg" type="audio/ogg"&gt
+            &ltsource  src="horse.mp3" type="audio/mp3"&gt
+        &lt/audio&gt    
+    </pre>
+    <p>Además hay unos atributos que suelen ser muy usados</p>
+    <ul>
+        <li>
+            <p><strong>autoplay: </strong> comienza a reporducirse inmediatamente cuando carga la pagina </p>
+        </li>
+        <li>
+            <p><strong>controls: </strong> da controles de reproducción a la pista de audio</p>
+        </li>
+        <li>
+            <p><strong>loop: </strong> reproduce el archivo repetitivamente</p>
+        </li>
+    </ul>
+    <p>a continuación, veamos la forma de enlazar un archivo de audio. Si queremos importar un archivo cualesquiera de mp3, entonces el codigo es:</p>
+    <pre>
+        &ltaudio controls&gt
+            &ltsource src="The Cranberries - Ode To My Family.mp3" type="audio/mpeg"&gt
+        &lt/audio&gt    
+    </pre>
+    <p><small>archivo de mp3</small></p>
+    <audio controls>
+        <source src="The Cranberries - Ode To My Family.mp3" type="audio/mpeg">
+    </audio>
+    <h2 class="section-title-2" id="tabla">Tablas &lttable&gt</h2>
+    <p>Una tabla es escencialmente una intersección de filas y columnas denominadas <strong>celdas</strong> las cuales contienen datos. Las etiquetas utilizadas para tales efectos son las etiquetas &lttr&gt y &lttd&gt, las
+    cuales son las etiquetas de <em><a id="tr">table row </a> </em> o fila de la tabla tr, y <em><a id="td">table data</a></em> o dato de la tabla. De tal forma que con la etiqueta &lttr&gt se asigna una fila, y a esta fila a su ves, se le asingan las celdass
+    que va a tener. Para poderlo tener más claro veamos el siguiente ejemplo
+    </p>
+    <pre>
+                &lttr&gt
+                    &lttd&gt&ltstrong&gtCURSO&lt/strong&gt&lt/td&gt
+                    &lttd&gt&ltstrong&gtHORAS&lt/strong&gt&lt/td&gt
+                    &lttd&gt&ltstrong&gtHORARIO&lt/strong>&lt/td&gt
+                &lt/tr&gt
+                &lttr&lt
+                    &lttd&ltCSS&lt/td&gt
+                    &lttd&lt20&lt/td&gt
+                    &lttd&lt16: 00 - 20: 00&lt/td&lt
+                &lttr/tr&lt
+                &lttr&gt
+                    &lttd&ltHTML&lt/td&gt
+                    &lttd&lt20&lt/td&gt
+                    &lttd&lt16: 00 - 20: 00&lt/td&gt
+                &lt/tr&gt
+    </pre>
+    <p>donde el codigo anteriormente descrito da como resultado la siguiente tabla</p>
+    <div class="table-detector">
+    <table id="table">
+        <tr>
+            <td><strong>CURSO</strong></td>
+            <td><strong>HORAS</strong></td>
+            <td><strong>HORARIO</strong></td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>20</td>
+            <td>16: 00 - 20: 00</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>20</td>
+            <td>16: 00 - 20: 00</td>
+        </tr>
+        <tr>
+            <td>Javascript</td>
+            <td>20</td>
+            <td>16: 00 - 20: 00</td>
+        </tr>
+    </table>
+    </div>
+    <p>Una práctica frecuente de los desarrolladores web es anexar a una fila, varias celdas horizantalmente, esta práctica se conoce como <em>spanning</em>, al respecto, veamos el siguiente ejemplo</p>
+    <p><strong>tabla usando el atributo rowspan</strong></p>
+        <pre>
+            &lttable id="table"&gt
+                &lttr&gt
+                    <strong>&lttd rowspan="3"&gt</strong>Tecnologías del frontend&lt/td&gt
+                &lt/tr&gt
+                    &lttd&gtHTML5&lt/td&gt
+                    &lttd&gtCSS5&lt/td&gt
+                    &lttd&gtJavascript&lt/td&gt
+                &lt/table&gt                                  
+        </pre> 
+    <div class="table-detector">
+        <table id="table">
+        <tr>
+           <td rowspan="3"><strong>Tecnologías del frontend</strong></td> 
+        </tr>
+           <td>HTML5</td>
+           <td>CSS5</td>
+           <td>Javascript</td>
+        </table> 
+    </div>
+    <p><strong>tabla usando el atributo 
+        colspan</strong></p>
+    <pre>
+        &lttable id="table"&gt
+            <strong>&lttd colspan="3"&gt</strong>Tecnologías del frontend&lt/td&gt
+            &lt/tr&gt
+                &lttd&gtHTML5&lt/td&gt
+                &lttd&gtCSS5&lt/td&gt
+                &lttd&gtJavascript&lt/td&gt
+            &lt/table&gt
+    </pre>
+    <div class="table-detector">
+    <table id="table">
+        <tr>
+           <td colspan="3"><strong>Tecnologías del frontend</strong></td> 
+        </tr>
+           <td>HTML5</td>
+           <td>CSS5</td>
+           <td>Javascript</td>
+        </table>
+    </div> 
+    <p>Otra práctica frecuente es estructurar la tabla con una fila de cabecera y una fila al pie, las etiquetas que permiten hacer esot son &lttfoot&gt -pie de tabla- y &ltthead&gt -cabecera de tabla respectivamente
+    veamos el siguiente ejemplo</p>
+    <p><strong>tablas usando pie y cabacera de tabla</strong></p>
+    <pre>
+        &lttable id="table-1"&gt
+            &ltthead&gt
+                &lttr&gt
+                    &lttd&gt&ltstrong&gtCurso&lt/strong&gt&lt/td&gt
+                    &lttd&gt&ltstrong&gtHoras&lt/strong&gt&lt/td&gt
+                &lt/tr&gt
+            &lt/thead&gt
+            &lttfoot&gt
+                &lttr&gt
+                    &lttd>&ltstrong>Total&lt/strong>&lt/td&gt
+                    &lttd>&ltstrong>180 horas&lt/strong>&lt/td&gt 
+                &lt/tr&gt
+                &lt/tfoot&gt
+            &lttbody&gt
+                &lttr&gt
+                    &lttd&gtHTML5&lt/td&gt
+                    &lttd&gt100 horas&lt/td&gt
+                    &lt/tr&gt
+                &lttr&gt
+                    &lttd&gtCSS3&lt/td&gt
+                    &lttd&gt80 horas&lt/td&gt
+                    &lt/tr&gt
+            &lt/tbody&gt
+        &lt/table&gt  
+    </pre>
+    <p>La tabla con el codgo usado anteriormente quedaría así</p>
+    <div class="table-detector">
+    <table id="table-1">
+        <thead>
+            <tr>
+                <td><strong>Curso</strong></td>
+                <td><strong>Horas</strong></td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td><strong>180 horas</strong></td> 
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>HTML5</td>
+                <td>100 horas</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>80 horas</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

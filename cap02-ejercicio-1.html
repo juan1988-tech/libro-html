@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cap02-ejercicio-1.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+    <script src="cap02-ejercicio-1.js"></script>
+    <script src="jquery.js"></script>
+    <title>html5, el lenguaje</title>
+</head>
+<body> 
+    <h1 class="principal-title">HTML:5 El Lenguaje</h1> <!--Este comentario no es visible para el usuario -->
+        <div class="image-hero">
+            <img class="imagen-hero" src="html.png">
+        </div>
+        <h1 class="principal-title">Breve introducción a a HTML</h1>
+    <p>HTML es el lenguaje en el que se escriben las paginas web, el termino fue acuñado por el científico  britanico <strong>Tim Berners Lee</strong>, que concebía al hipertexto como: "un documento el cual contiene una serie de
+        nodos de información por los cuales el usuario puede navegar a voluntad", su ultima versión es html5, cuenta con etiquetas que permiten contener archivos de video, audio, texto, enlaces, etc</p>
+    <p><strong>Html es un texto basado en marcas</strong>, las marcas (o tags) <strong>&ltmarca&gt</strong>. Las marcas siguen la notación que se muestra a continuación</p>
+        <pre>
+            &ltoscuro&gt <strong>este texto va en negritas</strong> &lt/oscuro&gt
+            y esta &ltimportante&gt <em>palabra</em> &lt/importante&gt es importante
+        </pre>
+        <p>En este ejemplo, las marcas &ltoscuro&gt e &ltimportante&gt le indican al nevegador que formatos debe tener las palabras, la idea es que esas etiquetas contienen unas funciones por defecto, que le permiten 
+        identificar a los navegadores que los textos encerrados en ellas van en negrita y en énfasis correspondientmente, así es como funciona el documento html
+        </p>  
+        <h2 class="section-title-2">Etiquetas y atributos</h2>
+        <p>Por terminos generales, las etiquetas tienen la siguiente presentación</p>
+        <pre>
+            &ltmarca&gtcontenido&lt/marca&gt
+        </pre>
+        <p>Las etiquetas tienen un cierre con el /, pero tambien hay etiquetas de presentación simple, tal y como se ve en el siguiente ejemplo</p>
+        <pre>
+            &ltimg&gt                                          &ltimg/&gt
+        </pre>
+        <p>Todas las etiquetas tienen <strong>atributos</strong>, los atributos contienen un conjunto de funciones que son interpretadas por un navegador</p>
+        <pre>
+                        atributo
+        
+             &ltimg src=""&gt
+
+            etiqueta
+        </pre>
+        <p>hay atributos de <strong>hiperenlace y atributos informativos</strong>, <strong>los atributos de hiperenlace</strong> son aquellos que permiten importar una serie de contenidos</p>
+        <pre>
+            &ltimg src="images/imagen.jpg"&gt
+        </pre>
+        <p><strong>los atributos informativos</strong> son los que permiten a los desarrolladores obtener cierta información con respecto a que hace con ciertas etiquetas</p>
+        <pre>
+            &ltimg alt="imagen de cabacera"/&gt
+        </pre>   
+        <section>
+            <h1 class="principal-title">El directorio de las etiquetas html</h1>
+            <p class="principal-text">Aquí encontrarás las etiquetas más usadas en el mundo del desarrollo web, en la parte de abajo encontrarás una explicación mas extensa de las etiquetas que aparecen en la tabla, con ejercicios sencillos para que las aprendas a usar</p>
+            <div class="tabla">
+            <h2 class="section-title-2">Etiquetas de la cabacera del documento &lthead&gt</h2>    
+                <table class="table">
+                    <thead>
+                        <td><strong>ETIQUETA</strong></td>
+                        <td><strong>DESCRIPCIÓN</strong></td>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="cap02-titulo2.html#head">&lthead&gt</a></td>
+                        <td>Contiene las etiquetas que afectan al documento en terminos generales &ltmeta&gt, &lttitle&gt, &ltscript&gt, &ltlink&gt</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo2.html#title">&lttitle&gt</a></td>
+                        <td>Da el título a la página web</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo2.html#meta">&ltmeta&gt</a></td>
+                        <td>contiene los elementos que son identificados tanto por el sistema operativo como por el navegador</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo2.html#link">&ltlink&gt</a></td>
+                        <td>incorpora archivos externos de diseño al documento web</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo2.html#script">&ltscript&gt</td>
+                        <td>incorpora los codigos de javscript, que se encargan de la gestión de la interacción del usuario con la página</td>    
+                    </tr>
+                    </tbody>
+                </table>
+            <h2 class="section-title-2">Etiquetas ubicadas en la etiqueta &ltbody&gt</h2>
+            <h3 class="section-title-3">Etiquetas de estructuración de contenido</h3>
+                <table class="table">
+                    <thead>
+                        <td><strong>ETIQUETA</strong></td>
+                        <td><strong>DESCRIPCIÓN</strong></td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="cap02-titulo3.html#header">&ltheader&gt</a></td>
+                            <td>Representa la cabecera, se usa para presentar la información introductoria</td>
+                        </tr>
+                        <tr>
+                            <td><a href="cap02-titulo3.html#footer">&ltfooter&gt</a></td>
+                            <td>Representa el cierre del documento, suele usarse para poner información de copyrgith, los créditos e información de contacto</td>
+                        </tr>
+                        <tr>
+                            <td><a href="cap02-titulo3.html#nav">&ltnav&gt</a></td>
+                            <td>Contiene el menu de navegación</td>
+                        </tr>
+                        <tr>
+                            <td><a href="cap02-titulo3.html#section">&ltsection&gt</a></td>
+                            <td>Define una sección del documento</td>
+                        </tr>
+                        <tr>
+                           <td><a href="cap02-titulo3.html#article">&ltarticle&gt</a></td>                       
+                           <td>Representa contenido de texto independiente</td> 
+                        </tr>
+                        <tr>
+                            <td>&ltfigure&gt</td>
+                            <td>Contiene un archivo de imagen independiente</td>
+                        </tr>
+                        <tr>
+                            <td><a href="cap02-titulo3.html#aside">&ltaside&gt</a></td>
+                            <td>Contiene un archivo de texto lateral a determinado contenido</td>
+                        </tr>
+                        <tr>
+                            <td>&ltdetails&gt</td>
+                            <td>Representa una serie de detalles que el usuario puede ocultar</td>
+                        </tr>    
+                    </tbody>
+                </table>
+            <h3 class="section-title-3">Etiquetas de nivel de énfasis de texto</h3>  
+                <table class="table">
+                    <thead>
+                        <td><strong>ETIQUETA</strong></td>
+                        <td><strong>DESCRIPCIÓN</strong></td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&ltp&gt</td>
+                            <td>Se usa para caracterizar los parrafos</td>
+                        </tr>
+                        <tr>
+                            <td>&lth1&gt .... &lth6&gt</td>
+                            <td>Se usa para poner títulos, donde h1 es el título con mayor enfasis y h6 el título con menor enfasis</td>
+                        </tr>  
+                    </tbody>
+                </table>
+              <h3 class="section-title-3">Etiquetas de caracterización textual</h3> 
+              <table class="table">
+                <thead>
+                    <td><strong>ETIQUETA</strong></td>
+                    <td><strong>DESCRIPCIÓN</strong></td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&ltbr&gt</td>
+                        <td>añade un salto de renglón</td>
+                    </tr>
+                    <tr>
+                        <td>&ltem&gt</td>
+                        <td>da un menor enfasis, tiene un atributo por defecto en el texto de cursiva</td>
+                    </tr>
+                    <tr>
+                        <td>&ltstrong&gt</td>
+                        <td>da un mayor enfasis, sirve para insertar texto de codigo en un parrafo</td>
+                    </tr>   
+                </tbody>
+              </table>
+              <h3 class="section-title-3">Listas</h3>
+              <table class="table">
+               <thead>
+                    <td><strong>ETIQUETA</strong></td>
+                    <td><strong>DESCRIPCIÓN</strong></td>
+               </thead>
+               <tbody>
+                <tr>
+                    <td><a href="cap02-titulo4.html#ol">&ltol&gt</a></td>
+                    <td>Sirve para poner listas numeradas</td>
+                </tr>
+                <tr>
+                    <td><a href="cap02-titulo4.html#ul">&ltul&gt</a></td>
+                    <td>Sirve para poner listas no numeradas</td>
+                </tr>
+                <tr>
+                    <td><a href="cap02-titulo4.html#dd-dt">&ltdd&gt &ltdt&gt</a></td>
+                    <td>Se utilizan para listas de definiciones donde la etiqueta &ltdt&gt se refiere
+                        a los terminos, y la etiqueta &ltdd&gt a las definiciones de esos terminos</td>
+                </tr>
+               </tbody> 
+              </table>
+              <h3 class="section-title-3">Los hipervínculos</h3>
+              <table class="table">
+                <thead>
+                    <td><strong>ETIQUETA</strong></td>
+                    <td><strong>DESCRIPCIÓN</strong></td>
+               </thead>  
+                <tbody>
+                    <tr>
+                        <td><a href="cap02-titulo4.html#a">&lta&gt</a></td>
+                        <td>Establece un enlace, los enlaces llevan a otra parte de la pagina o a paginas externas</td>
+                    </tr>
+                </tbody>  
+              </table> 
+              <h3 class="section-title-3">Etiquetas de importación de archivos multimedia</h3>
+              <table class="table">
+                <thead>
+                    <td><strong>ETIQUETA</strong></td>
+                    <td><strong>DESCRIPCIÓN</strong></td>
+                </thead>
+                <tbody>  
+                <tr>
+                    <td><a href="cap02-titulo4.html#img">&ltimg&gt</a></td>
+                    <td>Sirve para contener imagenes</td>
+                </tr>
+                <tr>
+                    <td><a href="cap02-titulo4.html#audio">&ltaudio&gt</a></td>
+                    <td>Sirve para importar archivos de audio</td>
+                </tr> 
+                <tr>
+                    <td><a href="cap02-titulo4.html#audio">&ltvideo&gt</a></td>
+                    <td>Sirve para importar archivos de video</td>
+                </tr>
+                <tr>
+                    <td><a href="cap02-titulo4.html#source">&ltsource&gt</a></td>
+                    <td>Se utiliza para soportar los formatos de las etiquetas de audio y de video</td>
+                </tr>
+                </tbody>  
+              </table>
+              <h3 class="section-title-3">Etiquetas asociadas a tablas</h3>
+              <table class="table">
+                <thead>
+                    <td><strong>ETIQUETA</strong></td>
+                    <td><strong>DESCRIPCIÓN</strong></td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="cap02-titulo4.html#tabla">&lttable&gt</a></td>
+                        <td>Se usa para poner tablas</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo4.html#tr">&lttr&gt</a></td>
+                        <td>Inserta una fila adentro de la tabla, la cantidad de casillas adentro de esta etiqueta depende de la etiqueta &lttd&gt</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo4.html#td">&lttd&gt</a></td>
+                        <td>Inserta una casilla de datos adentro de la etiqueta lttr&gt, lo cual determina el ancho de la tabla </td>
+                    </tr>
+                    <tr>
+                        <td>&ltthead&gt</td>
+                        <td>Es una etiqueta especial usada para poner la fila especial de una tabla</td>
+                    </tr>
+                    <tr>
+                        <td>&lttfoot&gt</td>
+                        <td>Es una etiqueta usada para poner la ultima fila de una tabla</td>
+                    </tr> 
+                </tbody>
+              </table>
+              <h3 class="section-title-3">Etiquetas de envío de datos del cliente al servidor</h3>
+              <table class="table">
+                <thead>
+                    <td><strong>ETIQUETA</strong></td>
+                    <td><strong>DESCRIPCIÓN</strong></td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#form">&ltform&gt</a></td>
+                        <td>Los formularios se usan para partes de la pagina que solicita los datos de un usuario</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#label">&ltlabel&gt</a></td>
+                        <td>Es el texto que explica al cliente, la forma en la que tiene que suministrar sus datos</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#input">&ltinput&gt</a></td>
+                        <td>Es el boton usado para extraer datos del cliente al servidor</td>
+                    </tr>                    
+                </tbody>
+              </table>
+              <h3 class="section-title-3">Formas de envío de datos con el boton input</h3>
+              <table class="table">
+                <thead>
+                    <td><strong>BOTÓN</strong></td>
+                    <td><strong>DESCRIPCIÓN</strong></td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#cuadro-texto">Cuadros de texto</a></td>
+                        <td>El botón recibe los datos relacionados con texto</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#contraseñas">Contraseñas</a></td>
+                        <td>El botón recibe datos de contraseñas que no son públicos</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#varios">Otras etiquetas</a></td>
+                        <td>Existen otros botones que reciben datos de email, url, telefono y buscadores</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#casillas-verifiacion">Casillas de verificaion</a></td>
+                        <td>Son los botones de listas de chequeo</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#casillas-opciones">Casillas de opciones</a></td>
+                        <td>Son los botones de elección de varias opciones</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#input-botones">Casillas de botones</a></td>
+                        <td>Corresponde a los diversos botones que tiene una página web</td>
+                    </tr>
+                    <tr>
+                        <td><a href="cap02-titulo5.html#rangos">Casillas de numeros y rangos</a></td>
+                        <td>Son los botones input que reciben los datos de números y los rangos entre estos</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <h5>¿Te gustó mi trabajo</h5>
+                <form method="GET">
+                    <label for="email"><h4>dejame tu correo aqui</h4></label>
+                    <input type="email" id="email" placeholder="deja tu correo aquí">
+                    <button type="button">enviar</button>
+                </form>
+            </div>
+            <div>
+                <h5>JUAN DAVID FRANCO</h5>
+                <h5>Frontend Designer</h5>
+                <h4>SIGUEME EN MIS REDES SOCIALES</h4>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/jdfranco1988" target="_blank"></a>
+                    <a href="https://www.instagram.com/jfrancoh1988/" target="_blank"></a>
+                    <a href="https://github.com/juan1988-tech" target="_blank"></a>
+                </div>
+            </div>
+            <div class="information">
+                <h4>Diseñado por</h4>
+                <a href="https://www.facebook.com/jdfranco1988" target="_blank"><h5>@jdfranco1988</h5></a>
+                <h3>La presente página fue hecha como parte de un proyecto<br>
+                para el curso de desarollo web de platzi,<br> para mas información, dale click al icono de abajo</h3>
+                <a href="https://platzi.com/" target="blank" class="platzi"></a>
+            </div>   
+        </footer> 
+</body>
+</html>

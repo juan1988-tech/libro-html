@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cap02-ejercicio-1.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+    <title>La cabecera de html</title>
+</head>
+<body>
+    <h1 class="principal-title">La cabecera de html</h1> <!--Este comentario no es visible para el usuario -->
+    <div class="image-hero">
+        <img class="imagen-hero" src="html.png">
+    </div>
+        <h2 class="section-title-2" id="head">La cabecera &lthead&gt</h2>
+        <p>La cabecera <strong>&lthead&gt&lthead/&gt</strong>es la primera etiqueta que se ubica en un documento de html, y contiene todos los elementos que rigen al documento en terminos generales:   
+        los metadatos, las librerías, los link de css y javascript, y el título. Los editores de codigo (tales como Atom o Visual Code) manejan comandos por defecto, con los que se escribe la etiqueta &lthead&gt y
+        las etiquetas de metadatos &lthmeta&gt, los cuales son elementos son similares para la mayoría de paginas. 
+        </p>
+        <pre>
+            &lt!DOCTYPE html&gt
+            &lthtml lang="en"&gt
+            <strong>&lthead&gt</strong>
+                &ltmeta charset="UTF-8"&gt
+                &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+                &lttitle&gtTítulo&lt/title&gt
+            <strong>&lt/head&gt</strong>
+            &lt/html&gt
+        </pre>
+        <h3 class="section-title-3" id="title">Título &lttitle&gt</h3>
+        <p>la etiqueta title <code>&lttitle&gt&lttitle/&gt</code> es la etiqueta que literalemete contiene el título de mi pagina web; esta etiqueta es muy importante, ya que el título es uno de
+        los primeros elementos localizados por los buscadores, el título se muestra tal y como sale la imagen a continuación
+        </p>
+        <pre>
+            &lthead&gt
+                &ltmeta charset="UTF-8"&gt
+                &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+            <strong>&lttitle&gtEjercicios capitulo 2&lt/title&gt</strong>
+            &lt/head&gt
+        </pre>
+        <figure>
+        <img alt="titulo de mi pagina" src="imagen-1.png">
+        <figcaption>el título de un documento html</figcaption>
+        </figure>
+        <h3 class="section-title-3" id="meta">Los metadatos &ltmeta&gt</h3>
+        <p><strong>Los metadatos</strong> son datos de identificación de archivos que son interpretados tanto por el sistema operativo como por el navegador, generalmente contienen el sistema de caracteres
+        según cada idioma
+        </p>
+        <pre>
+            &lthead&gt
+                <strong>&ltmeta charset="UTF-8"&gt</strong>
+                <strong>&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt</strong>
+            &lt/head&gt    
+        </pre>
+        <h3 class="section-title-3" id="link">Enlaces a archivos de estilo en cascada &ltlink&gt</h3>
+        <p>Los enlaces a otros archivos se traen por la etiqueta <strong>&ltlink&gt</strong>, esta etiqueta trae los enlaces externos de <strong>css,</strong> los cuales tienen como función 
+            dar un aspecto estetico a la pagina web. Los enlaces se presentan como se muestra a continuación
+        </p> 
+        <pre>
+            &lthead&gt
+                &ltmeta charset="UTF-8"&gt
+                &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+                <strong>&ltlink rel="stylesheet" type="text/css" href="cap02-ejercicio-1.css"&gt</strong>
+                &ltscript src="cap02-ejercicio-1.js">&lt/script&gt
+                &ltscript src="jquery.js"&gt&lt/script&gt
+                &lttitle&gtEjercicios capitulo 2&lt/title&gt
+            &lt/head&gt
+        </pre> 
+        <h3 class="section-title-3" id="script">Los enlaces de codigo interactivo javascript &ltscript&gt</h3>
+        <p>Los enlaces de script, traen el código que se encarga de la gestión de la interacción del usuario con la página. Javascript es un lenguaje de programación que se encarga de la interactividad;
+        es decir, este lenguaje reacciona a las solicitudes del usuario a partir de una serie de eventos. Si pruebas escribir el siguiente código
+        </p>
+        <pre>
+        &ltscript&gt 
+            var click = 0;    
+            function incrementar()
+            {
+                click = click + 1;
+                document.getElementById("contador").innerHTML = click;
+            }
+        &lt/script&gt 
+        &ltbutton type="button" onclick=incrementar()>aumenta&lt/button&gt
+        &ltp id="contador"&gt0&lt/p&gt  
+        </pre>
+        <p>El valor resultante en el documento html será</p>
+
+        <script>
+        var click = 0;    
+        function incrementar()
+        {
+            click = click + 1;
+            document.getElementById("contador").innerHTML = click;
+        }
+        </script>
+        
+        <button type="button" onclick=incrementar()>aumenta</button>
+        <p id="contador" >0</p>  
+        <article>
+            <p>En el ejemplo anterior, la función <strong>incrementar()</strong>, hace que se escriba en el documento html las veces que el usuario da click al botón llamado <strong>aumentar</strong>,
+                específicamente en el parrafo identificado como contador <strong>&ltp id="contador"&gt</strong>, haciendo que este incremento aumente de 1 en 1 <strong>click = click + 1</strong> 
+                .En concreto, el usuario activa el <strong>evento</strong> de incrementar el numero situado en la página, y javascript responde a esa solicitud activando la función</p>
+            <p>Hay desarrolladores web que incluyen las etiquetas script en la cabecera del documento html, por lo cual esta clase de etiquetas se consideran parte de la cabecera. Sin embargo, hay otros desarrolladores 
+            que la incluyen al final de la etiqueta body, ya que esto hace más eficiente la página, cuando el navegador carga primero los elementos visuales. Sin embargo, con la rapidez de los dispositivos de hoy esta 
+            diferencia no es percibida por el usuario. En realidad, esta elección es potestativa del desarrollador web
+            </p>
+        </article>
+</body>
+</html>

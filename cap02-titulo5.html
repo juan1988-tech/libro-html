@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cap02-ejercicio-1.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+    <script src="cap02-ejercicio-1.js"></script>
+    <title>Formularios</title>
+</head>
+<body>
+    <h1 class="principal-title">Formularios</h1>
+    <div class="image-hero">
+        <img class="imagen-hero" src="html.png">
+    </div>
+    <h2 class="section-title-2" id="form">Formularios &ltform&gt</h2>
+    <p>Los formularios son un elemento fundamental para el desarrollo web,ya que son las etiquetas responsables de extraer los datos de un usuario(que se localiza en lo que llamamos cliente), para enviarlos a un sistema 
+    encargado de administrar los datos totales que surgan a partir del total de usuarios con la página (que es lo que denominamos servidor)<br> Para los usuarios se usa la etiqueta <strong>&ltform&gt</strong>.
+    </p>
+    <p>Los atributos que permiten hacer esto son </p>
+    <ul>
+        <li>
+            <p><strong>action "URL": </strong>Contiene la URL del servidor que recibe los datos del cliente</p>
+        </li>
+        <li>
+            <p><strong>method: </strong> Coniste para indicarle al protocolo de http la forma de envío de los datos del cliente al servidor. Las dos formas de envío son</p>
+            <ul>
+                <li>
+                    <p><strong>GET: </strong> Envía la información a la URL especificada sin encriptar los datos, los cuales permanecen visibles, admite un tráfico de máximo 500 bytes</p>
+                </li>
+                <li>
+                    <p><strong>POST: </strong> Envía paquetes de datos con máyor peso, encripta los datos y por tanto, los datos permaneceran no visibles en el tráfico</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p>Para poder ver los atributos en funcionamiento, veamos el siguiente ejemplo</p>
+    <pre>
+            <strong>&ltform action="/servidor/" method="GET"&gt</strong>
+                &ltlabel&gt¿Quieres trabajar conmigo?&lt/label&gt
+                &ltinput type="mail"/&gt
+                &ltbottom type="bottom"&gtenviar&lt/bottom&gt
+            <strong>&lt/form&gt</strong>       
+    </pre>
+    <p>El codigo daría resultado lo siguiente</p>
+    <form action="/servidor/" method="GET">
+        <label for="email">Quieres trabajar conmigo</label>
+        <input type="email" id="email" value=@gmail.com>
+        <button type="button">enviar</button>
+    </form>
+    <h2 class="section-title-2" id="label">Etiquetas descriptivas &ltlabel&gt</h3>
+    <p>Toda etiqueta &ltform&gt, tiene una etiqueta asociada &ltlabel&gt la cual indica las especificaciones de la forma de envío de los datos. Esto quiere decir que si yo tengo una etiqueta que envía un correo. Debo tener una etiqueta asociada de "envía el correo aquí", para poder 
+    entender esto veamos un ejemplo    
+    </p>
+    <pre>
+                &ltform action="/servidor/" method="GET"&gt
+            <strong>&ltlabel&gtDeja tu nombre aquí&lt/label&gt</strong>                
+                        &ltinput type="text"&gt  
+                        &ltbottom type="bottom"&gtenviar&lt/bottom&gt
+                        &lt/form&gt    
+    </pre>
+    <p>El codigo daría como resultado lo siguiente</p>
+    <form action="/servidor/" method="GET"> 
+        <label for="nombre">Deja tu nombre aquí</label>
+        <input type="text" id="nombre">
+        <button type="button">enviar</button>
+    </form>
+    <h2 class="section-title-2" id="input">Botones de envío de datos &ltinput&gt</h2>
+    <p>Una práctica bastante generalizada en el mundo del desarrollo web, es usar las etiquetas  &ltform&gt de la mano con las etiquetas &ltlabel&gt e &ltinput&gt, los botones de input son formatos de envío de datos de un cliente a un servidor. Existen una gran cantidad de atributos: 
+    envío de datos, selección en listas no numeradas, botones de texto, de numeros, de email, etc. A continuación, vamos a ver a las etiquetas más usadas. Para poder aplicar los ejemplos de las etiquetas, vamos las siguientes reglas de estilo en CSS
+    </p>
+    <pre>
+        form, fieldset
+        {
+        display: flex;
+        flex-flow: row wrap
+        width: 480px;    
+        }
+
+        label
+        {
+        width: 200px;    
+        }
+        input
+        {
+        width: 250px;
+        margin-bottom: 7px;    
+        }
+    </pre>
+    <h3 class="section-title-3" id="cuadro-texto">Cuadros de texto input type="text"</h3>
+    <p>Para crear un cuadro de texto se usa el atributo <strong>type=text</strong>, también se usa el atributo <strong>name</strong>  para indicar el destino de envío de los datos</p>
+    <pre>
+        &ltform action="/servidor/" method="get"&gt
+            &ltlabel&gtDejame tu nombre&lt/label&gt
+            &ltinput type="text" name="boton-texto&lt" placeholder="deja tu nombre aquí"/&gt
+            &ltbuttom type="bottom"&gtenviar&lt/bottom&gt
+        &ltform/&gt 
+    </pre>
+    <p>El codigo escrito de esa forma debería dar como resultado lo siguiente</p>
+        <form action="/servidor/" method="GET">
+            <label for="email">Deja tu nombre aquí</label>
+            <input type="text" id="email" name="boton-texto" placeholder="deja tu nombre aquí"/>
+            <button type="button">Enviar</button>
+        </form>
+
+    <h3 class="section-title-3" id="contraseñas">Contraseñas input type="password"</h3>
+    <p>El atributo que le corresponde a la etiqueta input es <strong>password</strong>, cabe aclarar que en este punto hay que tener especial cuidado en cambiar el metodo de envió de los datos, en ves de elegir GET, elegimos el metodo
+    POST, el codigo sería el siguiente 
+    </p>
+    <pre>
+        &ltform action="/servidor/" method="POST"&gt
+            &ltlabel for="email"&gtEscribe la contraseña&lt/label&gt
+            &ltinput type="password"  name="boton-password" placeholder="escribe la contraseña aquí/&gt
+            &ltbutton type="button" &gtEnviar&lt/button&gt
+        &lt/form&gt
+    </pre>
+    <p>El resultado sería el siguiente</p>
+    <form action="/servidor/" method="POST">
+        <label for="password">Escribe la contraseña</label>
+        <input tpye="password" id="password" name="boton-password" placeholder="escribe la contraseña aquí">
+        <button type="button">Enviar</button>
+    </form>
+    <h3 class="section-title-3" id="varios">Etiquetas de recopilación de datos tel, email, url, buscadores</h3>
+    <p>Existen otros atributos en la etiqueta input para recopilar información, tales como los de email, teléfono, y busqueda. Para los casos en específico de email y URL, hay otros atributos esepcíficos  como lo ameritan
+    la recolección de esta clase de datos. El código sería</p>
+    <pre>
+        &ltform action="/servidor/" method="POST"&gt
+            &ltlabel&gtEmail: &lt/label&gt&ltinput type="email"&gt
+            &ltlabel&gtURL: &lt/label&gt&ltinput type="url"&gt
+            &ltlabel&gtTelefono: &lt/label&gt&ltinput type="tel"&gt
+            &ltlabel&gtBusqueda: &lt/label&gt&ltinput type="search"&gt
+        &lt/form&gt
+    </pre>
+    <form action="/servidor/" method="POST">
+        <label>Email: </label><input type="email">
+        <label>URL: </label><input type="url">
+        <label>Teléfono: </label><input type="tel">
+        <label>Busqueda: </label><input type="search">
+    </form>
+    <h3 class="section-title-3" id="casillas-verificacion">Casillas de verificación input type="checkbox"</h3>
+    <p>Para crear casillas de verificación de opción multiple se usa la etiqueta &ltinput type="chechox"&gt. Para esta etiqueta en específico, el atributo adicional "checked", nos servirá para establecer una opción pre-marcada</p>
+    <p>De entre estas opciones, escoge las que consideras correctas</p>
+        <pre>
+            &ltform&gt
+                &ltlabel&gtopción a: &lt/label&gt&ltinput type="checkbox"&gt
+                &ltlabel&gtopción b: &lt/label&gt&ltinput type="checkbox"&gt
+                &ltlabel&gtopción c: &lt/label&gt&ltinput type="checkbox"&gt
+                &ltlabel>opción d: &lt/label&gt&ltinput type="checkbox"&gt    
+            &lt/form&gt     
+        </pre>
+        <p>El resultado de este codigo sería </p>
+        <form>
+            <label>opción a: </label><input type="checkbox" checked>
+            <label>opción b: </label><input type="checkbox">
+            <label>opción c: </label><input type="checkbox">
+            <label>opción d: </label><input type="checkbox">    
+        </form>
+    <h3 class="section-title-3" id="casillas-opciones">Casillas de opciones input type="radio"</h3>
+    <p>Las casillas de opciones, las cuales se activan con el atributo <strong>radio</strong> funcionan de la misma forma que las casillas de verificación, pero en el caso de las casillas de opciones, solo se puede elegir un solo botón de entre todos. Esto quiere decir que la elección del botón define a 
+    la etiqueta label
+    </p>
+    <pre>
+        &ltform&gt
+            &ltlabel&gtopcion a: &lt/label&gt&ltinput type="radio"&gt
+            &ltlabel&gtopcion b: &lt/label&gt&ltinput type="radio"&gt
+            &ltlabel&gtopcion c: &ltlabel&gt&ltinput type="radio"&gt
+            &ltlabel&gtopcion d: &lt/label&gt&ltinput type="radio"&gt
+        &lt/form&gt    
+    </pre>
+    <form>
+        <label>opcion a: </label><input type="radio">
+        <label>opcion b: </label><input type="radio">
+        <label>opcion c: </label><input type="radio" checked>
+        <label>opcion d: </label><input type="radio">
+    </form>
+    <h3 class="section-title-3" id="input-botones">Botones de input input type="button"</h3>
+    <p>Los formatos de botones de la etiqueta input permiten varias opciones. Hay etiquetas con botones de imagen, con botones de reinicio de formulario, y de envío directo de datos. Los tipos de botones son:</p>
+    <ul>
+        <li>
+            <p><strong>&ltinput type="submit"&gt:</strong> Sirve para enviar los datos de forma directa al servidor</p>
+        </li>
+        <li>
+            <p><strong>&ltinput type="reset"&gt:</strong> Sirve para reiniciar el formulario</p>
+        </li>
+        <li>
+            <p><strong>&ltinput type="image" src="imagen/jpg"&gt:</strong> Carga una imagen en el boton-password</p>
+        </li>
+    </ul>
+    <p>Veamos el siguiente ejemplo</p>
+    <pre>
+        &ltlabel&gtBotón enviar&lt/label&gt
+        &ltinput type="submit" value="enviar"&gt
+        &ltlabel&gtBotón enviar con imagen&lt/label&gt
+        &ltnput type="image" src="boton.jpg"&gt
+        &ltlabel&gtBotón resetear&lt/label&gt
+        &ltinput type="reset" value="reiniciar"&gt
+        &ltlabel&gtBotón&lt/label&gt
+        &ltinput type="button" value="un boton"&gt
+    </pre>
+    <form>
+        <label>Botón enviar</label>
+        <input type="submit" value="enviar">
+        <label>Botón enviar con imagen</label>
+        <input type="image" src="boton.jpg">
+        <label>Botón resetear</label>
+        <input type="reset" value="reiniciar">
+        <label>Botón</label>
+        <input type="button" value="un boton">
+    </form>    
+    <h3 class="section-title-3" id="rangos">Números y rangos</h3>
+    <p>La etiqueta &ltinput type=number&gt permite enviar datos numéricos, este etiqueta tiene atributos por defecto que implica escribir un numero entre un rango de números. Estos atributos son <strong>min, max y step</strong> correspondientemente.
+    para poder tener esto más claro veamos un ejemplo
+    </p>
+    <pre>
+        &ltform&gt
+            &ltlabel&gtEscribe un numero, de 0 a 10&lt/label&gt
+            &ltinput type="number" min=0 max=10&gt
+        &lt/form&gt    
+    </pre>
+    <form>
+        <label>Escribe un numero, de 0 a 10</label>
+        <input type="number" min=0 max=10>
+    </form>  
+</body>
+</html>
